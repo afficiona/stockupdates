@@ -61,7 +61,6 @@
     "test": "npm run lint",
     "eject": "react-scripts eject",
     "lint": "eslint .",
-    "precommit": "lint-staged",
     "deploy": "sh bin/deploy.sh",
     "prerelease": "sh bin/prerelease.sh",
     "release": "standard-version",

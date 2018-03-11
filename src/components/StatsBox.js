@@ -48,7 +48,7 @@ class StatsBox extends Component {
                 if (this.state.data) {
                   return (
                     <TypeChooser>
-                      {type => <Chart width="320" type={type} data={this.state.data} />}
+                      {type => <Chart type={type} data={this.state.data} />}
                     </TypeChooser>
                   );
                 }
