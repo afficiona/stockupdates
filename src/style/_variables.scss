@@ -1,0 +1,25 @@
+$font-family-base:              'Nunito', sans-serif !default;
+$grid-gutter-width:             20px !default;
+$base-px-value:                 8px !default;
+
+//app sizes
+$app-content-width:             320px !default;
+
+//colors
+$brand-primary:                 #e0525f !default;
+$brand-success:                 #00c853 !default;
+$brand-secondary:               #ffffff !default;
+$text-color:                    #333333 !default;
+$body-bg:                       linear-gradient(#000000, $brand-primary) !default;
+$card-bg:                       #424242;
+$each-stats-bg:                 rgba(0,0,0,0.1);
+$border-color:                  rgba(0,0,0,0.1);
+
+//tabs
+$tabs-link-bg:                  rgba(0,0,0,0.07);
+
+//font sizes
+$font-size-h1:                  60px !default;
+
+//buttons
+$border-radius-small:           0 !default;
