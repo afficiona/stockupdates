@@ -1,18 +1,15 @@
-# Gecko Ticker (A sample stock updates app)
+# Gecko Stocks (A sample stock updates app)
 
-This project is a sample implementation of WebSocket on client and server side. It uses React and Redux to show and handle DOM changes from the stock updates.
-
-## Demo
-http://gecko-ticker.afficiona.com
+This project is a sample implementation of WebSocket on client side. It uses React and Redux to show and handle DOM changes from the stock updates.
 
 ## How to develop
 ### Git clone
-`git clone git@github.com:afficiona/gecko-ticker.git`
+`git clone git@github.com:afficiona/gecko-stocks.git`
 ### Install dependencies
 `npm i`
 
 ### Locally
-`npm run start-client`
+`npm start`
 This should open the localhost url in the browser with the page ready.
 
 ### Production
