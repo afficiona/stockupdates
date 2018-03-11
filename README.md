@@ -2,9 +2,6 @@
 
 This project is a sample implementation of WebSocket on client side. It uses React and Redux to show and handle DOM changes from the stock updates.
 
-## Demo
-http://gecko-stocks.afficiona.com
-
 ## How to develop
 ### Git clone
 `git clone git@github.com:afficiona/gecko-stocks.git`
