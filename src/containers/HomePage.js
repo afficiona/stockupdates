@@ -12,6 +12,10 @@ class HomePage extends Component {
     this.props.actions.fetchTickerUpdates();
   };
 
+  componentWillUnmount() {
+    this.props.actions.unSubscribeStockUpdates();
+  };
+
   render() {
     return (
       <div className="app">
@@ -21,7 +25,10 @@ class HomePage extends Component {
               Live Ticker
             </div>
             <div className="content-body">
-              <StatsBox Ticker={this.props.Ticker} />
+              <StatsBox
+                Ticker={this.props.Ticker}
+                StockCategories={this.props.StockCategories}
+              />
             </div>
           </div>
         </div>
@@ -32,7 +39,8 @@ class HomePage extends Component {
 
 function mapStateToProps({ Ticker }) {
   return {
-    Ticker
+    Ticker,
+    StockCategories: Ticker.getIn(['data', 'categorized'])
   };
 }
 

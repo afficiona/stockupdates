@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 /**
- * StatsBox is a component to show stats of all the stocks
+ * StatsBox is a component to show tabs for varius stock durations
  */
 class StatsTabs extends Component {
   constructor() {
@@ -35,31 +35,7 @@ class StatsTabs extends Component {
   };
 
   render() {
-    const stats = [{
-      label: 'Day High',
-      value: this.props.data.get('high')
-    },{
-      label: 'Open',
-      value: this.props.data.get('open')
-    },{
-      label: 'Avg Volume',
-      value: this.props.data.get('volume')
-    },{
-      label: '52wk High',
-      value: this.props.data.get('high')
-    },{
-      label: 'Day Low',
-      value: this.props.data.get('low')
-    },{
-      label: 'Today\'s Close',
-      value: this.props.data.get('close')
-    },{
-      label: 'Volume',
-      value: this.props.data.get('volume')
-    },{
-      label: '52wk Low',
-      value: this.props.data.get('low')
-    }];
+    const stats = this.props.data.toJSON();
     return (
       <div className="stats-box-tabs">
         <div className="tabs-header">

@@ -1,13 +1,14 @@
 import { fromJS } from 'immutable';
 
-import { normalizeTickerData } from './../utils/normalizer';
+import { normalizeTickerData, normalizeTabsData } from './../utils/normalizer';
 
 const initialState = fromJS({
-  isFetching: false,
+  isFetching: true,
   isFetchingError: false,
   isFetchedOnce: false,
   error: {},
-  data: {}
+  data: {},
+  tabs: {}
 });
 
 export default (state = initialState, action) => {
@@ -25,7 +26,12 @@ export default (state = initialState, action) => {
         data: normalizeTickerData(action.data)
       });
 
-    case 'FETCH_TICKER_UPDATE_ERRORED':
+    case 'SET_TABS_DATA':
+      return state.mergeIn(['data'], {
+        categorized: normalizeTabsData(state.get('data'))
+      });
+
+    case 'FETCH_TICKER_UPDATE_ERROR':
       return state.merge({
         isFetching: false,
         isFetchingError: true,
